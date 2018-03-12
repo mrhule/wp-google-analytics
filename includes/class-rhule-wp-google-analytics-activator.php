@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://github.com/mrhule
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Rhule_Wp_Google_Analytics
+ * @subpackage Rhule_Wp_Google_Analytics/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Rhule_Wp_Google_Analytics
+ * @subpackage Rhule_Wp_Google_Analytics/includes
+ * @author     Matthew Rhule <mfrhule@gmail.com>
  */
-class Plugin_Name_Activator {
+class Rhule_Wp_Google_Analytics_Activator {
 
 	/**
 	 * Short Description. (use period)

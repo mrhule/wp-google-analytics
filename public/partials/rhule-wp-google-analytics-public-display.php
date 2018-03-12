@@ -5,11 +5,11 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       https://github.com/mrhule
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public/partials
+ * @package    Rhule_Wp_Google_Analytics
+ * @subpackage Rhule_Wp_Google_Analytics/public/partials
  */
 ?>
 

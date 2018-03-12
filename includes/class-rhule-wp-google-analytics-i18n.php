@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       https://github.com/mrhule
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Rhule_Wp_Google_Analytics
+ * @subpackage Rhule_Wp_Google_Analytics/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Rhule_Wp_Google_Analytics
+ * @subpackage Rhule_Wp_Google_Analytics/includes
+ * @author     Matthew Rhule <mfrhule@gmail.com>
  */
-class Plugin_Name_i18n {
+class Rhule_Wp_Google_Analytics_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Plugin_Name_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'plugin-name',
+			'rhule-wp-google-analytics',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
