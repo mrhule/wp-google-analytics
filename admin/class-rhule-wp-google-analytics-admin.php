@@ -144,22 +144,37 @@ public function display_plugin_setup_page() {
 	include_once( 'partials/rhule-wp-google-analytics-admin-display.php' );
 }
 
+//Load
 public function options_update(){
 	register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));	
 }
 
+
+/**
+ * Sanitized input to string only
+ * Calls validate_ga_code to verify real GA code
+ * If code is invalid, store "Invalid GA Code" and let user know
+ * @since 1.0.0
+ */
 public function validate($input){
 	$valid = array();
 	
 	$valid['ga_code'] = filter_var($input['ga_code'], FILTER_SANITIZE_STRING);	
 	if($this->validate_ga_code($input['ga_code'])){
+		$valid['valid'] = true;
 		return $valid;		
 	}else{		
 		$valid['ga_code'] = filter_var('Invalid GA Code');
+		$valid['valid'] = false;
 		return $valid;
 	}
 	
 }
+
+/**
+ * Check if input is a valid Google Analytics code.
+ * @since 1.0.0
+*/
 
 public function validate_ga_code($ga){	
 	return preg_match('/^ua-\d{4,9}-\d{1,4}$/i', strval($ga))? true : false;

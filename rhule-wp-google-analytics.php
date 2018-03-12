@@ -81,13 +81,17 @@ function run_rhule_wp_google_analytics() {
 }
 run_rhule_wp_google_analytics();
 
+
+/**
+ * Insert GA code into site
+ */
 function insert_into_footer(){
 
     $options = get_option('rhule-wp-google-analytics');
 
+	if($options['valid']){
     $ga_code = $options['ga_code'];
 
-	//echo "<div id='tester'>test".$ga_code."</div>";
 ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -101,6 +105,15 @@ function insert_into_footer(){
 </script>
 
 <?php
+//end if
+	}else{
+		?>
+		<script>
+			console.log('No GA Code found');
+		</script>
+		<?php
+	}
+
 }
 
 add_action('wp_footer', insert_into_footer());
