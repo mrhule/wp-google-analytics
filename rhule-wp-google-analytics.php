@@ -93,6 +93,7 @@ function insert_into_footer(){
     $ga_code = $options['ga_code'];
 
 ?>
+<div class="ga-footer">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code?>"></script>
@@ -104,6 +105,7 @@ function insert_into_footer(){
   gtag('config', '<?php echo $ga_code?>');
 </script>
 
+</div>
 <?php
 //end if
 	}else{
@@ -116,5 +118,5 @@ function insert_into_footer(){
 
 }
 
-add_action('wp_footer', insert_into_footer());
+add_action('wp_footer', 'insert_into_footer');
 		
